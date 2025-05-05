@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# EventMap - система интерактивных событий на карте
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## О проекте
 
-Currently, two official plugins are available:
+EventMap - это веб-приложение для просмотра и взаимодействия с событиями на интерактивной карте. Система позволяет пользователям находить события по местоположению, фильтровать их по различным критериям, а также создавать собственные события.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Ключевые возможности
 
-## Expanding the ESLint configuration
+- **Интерактивная карта событий**: просмотр всех событий на карте в реальном времени
+- **Фильтрация событий**: поиск событий по категориям, датам и другим параметрам
+- **Создание событий**: возможность добавления собственных событий на карту
+- **Детальная информация**: подробное описание каждого события с возможностью просмотра местоположения
+- **Мобильная адаптация**: полностью адаптивный интерфейс для использования на любых устройствах
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Технический стек
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Проект разработан с использованием современных технологий:
+
+- **React** - JavaScript библиотека для построения пользовательских интерфейсов
+- **TypeScript** - типизированный JavaScript для повышения надежности кода
+- **Vite** - быстрый инструмент сборки для современных веб-приложений
+- **Tailwind CSS** - утилитарный CSS-фреймворк для быстрой стилизации
+- **shadcn/ui** - компоненты пользовательского интерфейса для создания красивых и доступных приложений
+- **React Router** - маршрутизация для навигации между страницами
+- **Leaflet** - библиотека для интерактивных карт
+- **React Query** - управление состоянием и кеширование данных
+
+## Начало работы
+
+### Установка и запуск
+
+Для локальной разработки:
+
+```sh
+# Клонирование репозитория
+git clone https://github.com/Leveofan97/event_map.git
+
+# Установка зависимостей
+npm i
+
+# Запуск сервера разработки
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Структура проекта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `/src/components` - переиспользуемые компоненты
+- `/src/pages` - страницы приложения
+- `/src/contexts` - контексты для управления состоянием
+- `/src/hooks` - пользовательские хуки
